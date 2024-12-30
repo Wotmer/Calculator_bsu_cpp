@@ -18,4 +18,5 @@ add_executable(test_calc
         src/calculator.cpp
         src/expression_parser.cpp
         src/utils.cpp
+        tests/test_calculator.cpp
 )
