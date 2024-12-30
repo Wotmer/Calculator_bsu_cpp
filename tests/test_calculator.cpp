@@ -26,6 +26,17 @@ void testCalculator() {
         std::cout << "Тест 13 (корни выражения x^2 + 4x + 5): "; Calculator::SolveQuadratic(1, 4, 5); std::cout << " (Ожидается: Нет корней)" << std::endl;
         std::cout << "Тест 14 (корни выражения 0): "; Calculator::SolveQuadratic(0, 0, 0); std::cout << " (Ожидается: Бесконечно много корней)" << std::endl;
         std::cout << "Тест 15 (корни выражения x^2 - 5x + 6): "; Calculator::SolveQuadratic(1, -5, 6); std::cout << " (Ожидается: Два корня 2 3)" << std::endl;
+        std::cout << "Тест 16 (произведение матрицы {{1, 0, 2}} и матрицы {{2, 1}, {11, -5}, {1, -1}}): " << std::endl;
+        const auto result = Calculator::MultiplyMatrices(
+        {{1, 0, 2}}, {{2, 1}, {11, -5}, {1, -1}});
+        for (const auto& row : result) {
+          for (const auto& el : row) {
+            std::cout << el << ' ';
+          }
+          std::cout << std::endl;
+        }
+        std::cout << "(Ожидается: 4 -1)" << std::endl;
+
     } catch (const std::invalid_argument& e) {
         std::cerr << "Поймана ошибка в тестах Calculator: " << e.what() << std::endl;
     }
