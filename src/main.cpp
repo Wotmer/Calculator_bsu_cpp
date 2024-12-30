@@ -80,9 +80,22 @@ int main() {
                             }
                             std::cout << "Введите размеры второй матрицы" << std::endl;
                             std::cin >> w2 >> l2;
-                            if (l1 != w2) {
+                            while (l1 != w2) {
                                 std::cerr << "Количество столбцов первой матрицы должно совпадать с количеством строк второй" << std::endl;
-                                return 0;
+                                std::cout << "Если хотите изменить размеры первой матрицы введите 1" << std::endl;
+                                std::cout << "Если хотите изменить размеры второй матрицы введите 2" << std::endl;
+                                std::cout << "Если хотите выйти введите 3" << std::endl;
+                                int turn;
+                                std::cin >> turn;
+                                if (turn == 1) {
+                                    std::cin >> w1 >> l1;
+                                }
+                                if (turn == 2) {
+                                    std::cin >> w2 >> l2;
+                                }
+                                if (turn == 3) {
+                                    break;
+                                }
                             }
                             std::cout << "Введите вторую матрицу построчно" << std::endl;
                             std::vector<std::vector<int32_t>> rhs(w2, std::vector<int32_t>(l2, 0));
