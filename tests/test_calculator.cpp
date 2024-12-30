@@ -1,4 +1,3 @@
-/*
 #include <iostream>
 #include <include/expression_parser.h>
 #include <include/calculator.h>
@@ -13,8 +12,8 @@ void testCalculator() {
         std::cout << "Тест 6 (2 ^ 3): " << Calculator::calculate(2, 3, '^') << " (Ожидается: 8)" << std::endl;
 
         // Унарные операции
-        std::cout << "Тест 7 (sqrt(16)): " << Calculator::calculateUnary(16, "sqrt") << " (Ожидается: 4)" << std::endl;
-        std::cout << "Тест 8 (abs(-5)): " << Calculator::calculateUnary(-5, "abs") << " (Ожидается: 5)" << std::endl;
+        std::cout << "Тест 7 (_16): " << Calculator::calculateUnary(16, '_') << " (Ожидается: 4)" << std::endl;
+        std::cout << "Тест 8 (|(-5)): " << Calculator::calculateUnary(-5, '|') << " (Ожидается: 5)" << std::endl;
 
     } catch (const std::invalid_argument& e) {
         std::cerr << "Поймана ошибка в тестах Calculator: " << e.what() << std::endl;
@@ -26,4 +25,3 @@ int main() {
     testCalculator();
     return 0;
 }
-*/
